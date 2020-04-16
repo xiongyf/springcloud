@@ -23,6 +23,10 @@ public class ProductApi {
         return productFeignClient.queryById(id);
     }
 
+    public void update(Product product) {
+        productFeignClient.update(product);
+    }
+
     public Product getByIdFallbackMethod(String id) {
         return Product.builder().id("x").title("error").build();
     }

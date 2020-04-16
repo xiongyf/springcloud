@@ -3,9 +3,7 @@ package com.kevin.productapi.controller;
 import com.kevin.productapi.domain.Product;
 import com.kevin.productapi.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ProductController {
@@ -13,7 +11,13 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping(value = "/product/{id}")
-    public Product queryOrderById(@PathVariable("id") String id) {
+    public Product queryById(@PathVariable("id") String id) {
         return this.productService.getById(id);
+    }
+
+    @PostMapping(value = "/product")
+    public void update(@RequestBody Product product) {
+        System.out.println("update product:");
+        System.out.println(product);
     }
 }

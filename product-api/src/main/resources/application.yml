@@ -1,15 +1,15 @@
 server:
-  port: 8081
+  port: 8100
 
 spring:
   application:
     name: product-api
-###服务注册到eureka注册中心的地址
+
+#register to eureka server
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8100/eureka/,http://zpc:123456@127.0.0.1:9100/eureka/
-    ###因为该应用为服务提供者，是eureka的一个客户端，需要注册到注册中心
+      defaultZone: http://127.0.0.1:9100/eureka/,http://127.0.0.1:9200/eureka/
+    #as this is eureka client,so need to register to server
     register-with-eureka: true
-    ###是否需要从eureka上检索服务
     fetch-registry: true

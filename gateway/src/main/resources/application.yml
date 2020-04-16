@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: app-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9100/eureka/,http://127.0.0.1:9200/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true #register to Eureka server
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}###${server.port}
+zuul:
+  routes: #define forward rules
+    product-service: #product-service, this name can be any string
+      path: /product-service/** #url contains product-service will forward to product-api
+      serviceid: product-api
+    order-service:
+      path: /order-service/**
+      serviceid: order-api

@@ -9,4 +9,9 @@ public class ProductFeignClientFallback implements ProductFeignClient {
     public Product queryById(String id) {
         return Product.builder().id("x").title("error").build();
     }
+
+    @Override
+    public void update(Product product) {
+
+    }
 }

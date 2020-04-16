@@ -1,6 +1,7 @@
 package com.kevin.orderapi.domain;
 
 import com.kevin.productapi.domain.Product;
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ApiModel
 public class Order {
 
     private String id;
