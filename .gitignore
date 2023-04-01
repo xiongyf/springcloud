@@ -27,3 +27,4 @@ nbdist/
 .gitattributes
 .settings
 classes
+.DS_Store
