@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: cloud
+  profiles:
+    active:
+      client
+  cloud:
+    config:
+      uri: http://localhost:8080

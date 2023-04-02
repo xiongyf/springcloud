@@ -39,8 +39,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
-            <scope>provided</scope>
+            <version>1.18.26</version>
         </dependency>
     </dependencies>
 
@@ -72,6 +71,7 @@
         <module>eureka-server-a</module>
         <module>eureka-server-b</module>
         <module>config-server</module>
+        <module>config-client</module>
         <module>gateway</module>
         <module>order-api</module>
         <module>product-api</module>

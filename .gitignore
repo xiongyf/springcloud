@@ -23,8 +23,7 @@ dist/
 nbdist/
 .nb-gradle/
 
-.project
 .gitattributes
-.settings
 classes
 .DS_Store
+*.mvn/
